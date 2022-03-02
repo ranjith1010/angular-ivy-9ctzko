@@ -7,8 +7,8 @@ import { Component, VERSION } from '@angular/core';
 })
 export class AppComponent {
   name = 'My App Demo ';
-  car = '';
-  selectCar(carName) {
-    this.car = carName;
+  car = 'lambo';
+  public setCar(event) {
+    this.car = event.target.value;
   }
 }

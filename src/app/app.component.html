@@ -1,9 +1,13 @@
 <hello name="{{ name }}"></hello>
-<form>
-  <select id="car" onselect="setCar()">
-    <option value="lambo">Lamboghini Aventador</option>
+<form id="Hello">
+  <select id="car" name="cars" value="{{ car }}" (change)="setCar($event)">
     <option value="benz">Mercedes Benz G63</option>
+    <option value="lambo">Lamboghini Aventador</option>
     <option value="maruthi">Maruthi Swift</option>
   </select>
-
+  <br /><br />
+  <div *ngIf="car != 'benz'">
+    <input type="text" placeholder="Are you from India?" />
+  </div>
 </form>
+<h4>{{ car }}</h4>
